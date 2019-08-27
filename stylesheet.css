@@ -1,0 +1,164 @@
+.header {
+    background: #3a423d;
+    color: #CEA64E;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.lead {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+}
+
+.advice {
+    /* color: rgb(255, 203, 154); */
+    color: #1ec2b1;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #CEA64E !important;
+    color: #006727 !important;
+}
+
+thead {
+    background: #CEA64E;
+    font-size: 1.5rem !important;
+}
+
+.fas {
+    color: #006727;
+}
+
+.btn-dark:hover {
+    background: white !important;
+    color: #CEA64E !important;
+}
+
+.btn-dark {
+    font-weight: 700;
+}
+
+#thick_hr {
+    border: 2px solid;
+}
+
+.btn-outline-secondary {
+    border: none !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background: transparent !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+}
+
+.btn-outline-success {
+    border: 2px solid #006727 !important;
+    color: #CEA64E !important;
+    font-weight: 800 !important;
+}
+
+.fas:hover {
+    color: #CEA64E;
+}
+
+.fa-calculator:hover,
+.fa-trash-alt:hover {
+    color: #006727;
+}
+
+.fa-times {
+    color: #ee2805;
+}
+
+li:active {
+    background: #94721A;
+}
+
+li {
+    z-index: 0;
+}
+
+.absolute-position {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+}
+
+.select-item2 {
+    /* background: #476452; */
+    background: rgb(231, 248, 232);
+    /* color: white; */
+    color: rgb(102, 101, 101);
+}
+
+.select-item2:hover {
+    background: #acd1cf;
+}
+
+.empty-feedback {
+    color: red;
+    font-size: 0.8rem;
+    display: none;
+
+}
+
+.add-cursor {
+    cursor: pointer !important;
+}
+
+.activeItem {
+    background: rgb(250, 227, 178);
+}
+
+.activeItem:hover {
+    background: rgb(250, 227, 178) !important;
+}
+
+.card {
+    background: #FFEECA;
+    color: #035e26;
+    border: 2px solid #035e26;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.advice2 {
+    /* color: rgb(255, 203, 154); */
+    color: #d13c0f;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.trash:hover {
+    color: red !important;
+}
+
+.modal-dialog {
+    border-style: solid;
+    border-color: #034d1f96;
+    border-width: 8px;
+    border-radius: 5px;
+}
+
+.modal-header {
+    background: #CEA64E;
+    color: rgb(250, 250, 250);
+}
+
+
+/* .text-brown {
+    color: rgb(136, 104, 35);
+    font-weight: 900 !important;
+} */
