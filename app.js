@@ -388,28 +388,23 @@ const App = (function () {
                 result.id_303 += Number(totalArray[i].id_303);
                 result.id_304 += Number(totalArray[i].id_304);
                 result.id_305 += Number(totalArray[i].id_305);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
-                // result.id_255 += Number(totalArray[i].id_208);
+                result.id_306 += Number(totalArray[i].id_306);
+                result.id_307 += Number(totalArray[i].id_307);
+                result.id_309 += Number(totalArray[i].id_309);
+                result.id_401 += Number(totalArray[i].id_401);
+                result.id_404 += Number(totalArray[i].id_404);
+                result.id_405 += Number(totalArray[i].id_405);
+                result.id_406 += Number(totalArray[i].id_406);
+                result.id_415 += Number(totalArray[i].id_415);
+                result.id_435 += Number(totalArray[i].id_435);
+                result.id_418 += Number(totalArray[i].id_418);
+                result.id_320 += Number(totalArray[i].id_320);
+                result.id_323 += Number(totalArray[i].id_323);
+                result.id_328 += Number(totalArray[i].id_328);
+                result.id_430 += Number(totalArray[i].id_430);
+                result.id_606 += Number(totalArray[i].id_606);
+                result.id_601 += Number(totalArray[i].id_601);
+                result.id_262 += Number(totalArray[i].id_262);
             }
             UICtrl.getAnalysisTable('Total', null, null, result);
 
@@ -420,7 +415,9 @@ const App = (function () {
 
     //Public Methods
     return {
-        init: function () {
+        init: window.onload = function () {
+
+            localStorage.clear();
 
             loadEventListeners();
 

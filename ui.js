@@ -160,7 +160,9 @@ const UICtrl = (function () {
                 //daily values recomended
                 let drWater = 2500, drEnergy = 2000, drProtein = 50, drFat = 78, drCarbo = 275, drFiber = 28,
                     drSugars = 50, drSodium = 2300, drPotassium = 4700, drCalcium = 1000, drIron = 18,
-                    drMagnesium = 350, drPhosphorus = 700, drFolate = 400;
+                    drMagnesium = 350, drPhosphorus = 700, drFolate = 400, drZinc = 10, drVitc = 80, drRiboflavin = 1.2,
+                    drThiamin = 1.1, drNiacin = 15, drVitb6 = 1.3, drVitarae = 800, drVitb12 = 2.4, drVite = 15, drVitd = 15,
+                    drVitk = 115, drCaffeine = 150, drCholesterol = 300, drFatsaturated = 20;
 
                 if (items.foods[i].food.desc.ndbno == id || name == 'Total') {
 
@@ -181,6 +183,8 @@ const UICtrl = (function () {
 
 
                     }
+                    console.log(storageNutrients);
+                    console.log(round(storageNutrients.id_435));
                     //set the item to local storage
                     if (name != 'Total') {
 
@@ -205,7 +209,7 @@ const UICtrl = (function () {
                                     <th scope="col"> * % Daily Value</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="nutrientsItems">
                                 <tr>
                                     <td>Water</td>
                                     <td>g</td>
@@ -272,39 +276,233 @@ const UICtrl = (function () {
                                     <td>${round(storageNutrients.id_305)}</td>
                                     <td>${percentCalc(storageNutrients.id_305, drPhosphorus)}</td>
                                 </tr>
+                                <tr>
+                                    <td>Potassium, K</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_306)}</td>
+                                    <td>${percentCalc(storageNutrients.id_306, drPotassium)}</td>
+                                </tr>
+                                <tr>
+                                    <td>Sodium, Na</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_307)}</td>
+                                    <td>${percentCalc(storageNutrients.id_307, drSodium)}</td>
+                                </tr>
+                                <tr>
+                                    <td>Zinc, Zn</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_309)}</td>
+                                    <td>${percentCalc(storageNutrients.id_309, drZinc)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Vitamin C, total ascorbic acid</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_401)}</td>
+                                    <td>${percentCalc(storageNutrients.id_404, drVitc)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Thiamin</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_404)}</td>
+                                    <td>${percentCalc(storageNutrients.id_404, drThiamin)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Riboflavin</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_405)}</td>
+                                    <td>${percentCalc(storageNutrients.id_405, drRiboflavin)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Niacin</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_406)}</td>
+                                    <td>${percentCalc(storageNutrients.id_406, drNiacin)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Vitamin B-6</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_415)}</td>
+                                    <td>${percentCalc(storageNutrients.id_415, drVitb6)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Folate, DFE</td>
+                                    <td>&micro;g</td>
+                                    <td>${round(storageNutrients.id_435)}</td>
+                                    <td>${percentCalc(storageNutrients.id_435, drFolate)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Vitamin B-12</td>
+                                    <td>&micro;g</td>
+                                    <td>${round(storageNutrients.id_418)}</td>
+                                    <td>${percentCalc(storageNutrients.id_418, drVitb12)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Vitamin A, RAE</td>
+                                    <td>&micro;g</td>
+                                    <td>${round(storageNutrients.id_320)}</td>
+                                    <td>${percentCalc(storageNutrients.id_320, drVitarae)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Vitamin E (alpha-tocopherol) </td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_323)}</td>
+                                    <td>${percentCalc(storageNutrients.id_323, drVite)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Vitamin D (D2 + D3)</td>
+                                    <td>&micro;g</td>
+                                    <td>${round(storageNutrients.id_328)}</td>
+                                    <td>${percentCalc(storageNutrients.id_328, drVitd)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Vitamin K (phylloquinone)</td>
+                                    <td>&micro;g</td>
+                                    <td>${round(storageNutrients.id_430)}</td>
+                                    <td>${percentCalc(storageNutrients.id_430, drVitk)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Fatty acids, total saturated</td>
+                                    <td>g</td>
+                                    <td>${round(storageNutrients.id_606)}</td>
+                                    <td>${percentCalc(storageNutrients.id_606, drFatsaturated)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Cholesterol</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_601)}</td>
+                                    <td>${percentCalc(storageNutrients.id_601, drCholesterol)}</td>
+                                </tr>
+                                 <tr>
+                                    <td>Caffeine</td>
+                                    <td>mg</td>
+                                    <td>${round(storageNutrients.id_262)}</td>
+                                    <td>${percentCalc(storageNutrients.id_262, drCaffeine)}</td>
+                                </tr>
                             </tbody>
                         </table>
                         <!-- pagination -->
                         <nav class="">
-                            <ul class="pagination justify-content-center mb-2">
-                                <li class="page-item">
-                                    <a href="#" class="page-link">
-                                        <span>&laquo;</span>
+                            <ul class="pagination justify-content-center mb-2" id="pagination2">
+                                <li class="page-item first" id="prev2">
+                                    <a href="javascript:;" class="page-link">
+                                        <span class="nopointer">&laquo;</span>
                                     </a>
                                 </li>
                                 <li class="page-item active">
-                                    <a href="#" class="page-link">
+                                    <a href="javascript:;" class="page-link">
                                         <span>1</span>
                                     </a>
                                 </li>
                                 <li class="page-item">
-                                    <a href="#" class="page-link">
+                                    <a href="javascript:;" class="page-link">
                                         <span>2</span>
                                     </a>
                                 </li>
                                 <li class="page-item">
-                                    <a href="#" class="page-link">
+                                    <a href="javascript:;" class="page-link">
                                         <span>3</span>
                                     </a>
                                 </li>
                                 <li class="page-item">
-                                    <a href="#" class="page-link">
-                                        <span>&raquo;</span>
+                                    <a href="javascript:;" class="page-link">
+                                        <span>4</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="javascript:;" class="page-link">
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li class="page-item last" id="next2">
+                                    <a href="javascript:;" class="page-link">
+                                        <span class="nopointer">&raquo;</span>
                                     </a>
                                 </li>
                             </ul>
                         </nav>
                     </div>`;
+
+                    let pagination2 = document.querySelector('#pagination2');
+
+                    let nutrientsItems = document.querySelector('#nutrientsItems').children;
+
+                    let prevBtn2 = document.querySelector('#prev2');
+                    let nextBtn2 = document.querySelector('#next2');
+
+                    const paginate = (page = 1) => {
+
+                        let currentPage = page;
+
+                        let recordsPerPage = 6;
+
+                        if (currentPage == 1) {
+                            prevBtn2.style.visibility = "hidden";
+                        } else {
+                            prevBtn2.style.visibility = "visible";
+                        }
+
+                        if (currentPage == 5) {
+                            nextBtn2.style.visibility = "hidden";
+                        } else {
+                            nextBtn2.style.visibility = "visible";
+                        }
+
+                        for (let i = 0; i < nutrientsItems.length; i++) {
+                            nutrientsItems[i].style.display = 'none';
+
+                        }
+
+                        for (let i = (currentPage - 1) * recordsPerPage; i < (currentPage * recordsPerPage); i++) {
+
+                            if (nutrientsItems[i]) {
+                                nutrientsItems[i].style.display = 'table-row';
+                                //if item is last one on page and it's removed, then paginate again with the previous page
+                            }
+
+
+                            else break;
+
+                        }
+                    };
+                    paginate();
+
+                    pagination2.addEventListener('click', (e) => {
+                        // console.log(e.target.textContent);
+
+                        let activeItem = 1;
+                        for (let item of pagination2.children) {
+
+                            if (item.classList.contains('active')) {
+
+                                activeItem = item.textContent;
+                            }
+                            item.classList.remove('active');
+                        }
+
+                        //handle the html entities
+                        let text = e.target.textContent;
+                        if (e.target.parentElement.classList.contains('first'))
+                            text = text.replace(text, 'laquo');
+
+                        if (e.target.parentElement.classList.contains('last'))
+                            text = text.replace(text, 'raquo');
+
+                        if (text == 'laquo') {
+                            activeItem--;
+                        } else if (text == 'raquo') {
+                            activeItem++;
+
+                        } else {
+                            activeItem = e.target.textContent;
+                        }
+
+                        paginate(activeItem);
+                        //console.log(activeItem);
+                        //console.log(pagination2.children[2]);
+                        pagination2.children[Number(activeItem)].classList.add('active');
+
+                    });
+
                     break;
                 } else {
                     emptyAnalysis();
