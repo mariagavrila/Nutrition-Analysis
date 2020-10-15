@@ -1,4 +1,3 @@
-
 //Item Controller
 const ItemCtrl = (function () {
 
@@ -8,7 +7,7 @@ const ItemCtrl = (function () {
         totalArray: []
     }
     //Fetch the items from the demo_api or from the USDA Api
-  // TODO get dynamics items from the API
+    // TODO get dynamics items from the API
     FetchItems.getItems().then(items => {
 
         let i = 0;
@@ -17,6 +16,10 @@ const ItemCtrl = (function () {
             i++;
         }
     });
+
+    async function formatString(string) {
+        return string.toLowerCase()
+    }
 
     return {
         getItems: function () {
@@ -33,10 +36,11 @@ const ItemCtrl = (function () {
             }
 
             //Handle the next and previous buttons
-            // TODO strings validations
-            if (page === 'raquo') {
+
+
+            if (formatString(page) === formatString('raquo')) {
                 currentPage++;
-            } else if (page === 'laquo') {
+            } else if (formatString(page) === formatString('laquo')) {
                 currentPage--;
 
             } else {
@@ -108,10 +112,7 @@ const App = (function () {
                     if (name.indexOf(userText) != -1) {
 
                         UICtrl.chooseItem(item.name, item.ndbno);
-                    }
-
-
-                    else {
+                    } else {
                         UICtrl.noFound();
                     }
                 })
@@ -195,8 +196,7 @@ const App = (function () {
                         text = text.replace(text, 'laquo');
                         item.previousElementSibling.classList.add('active');
                         break;
-                    }
-                    else {
+                    } else {
                         e.target.parentElement.classList.add('active');
                         break;
                     }
@@ -269,8 +269,7 @@ const App = (function () {
                 if (input.disabled) {
 
                     input.value = 0;
-                }
-                else {
+                } else {
 
                     input.value = inputVal;
                 }
@@ -299,8 +298,7 @@ const App = (function () {
                 if (input.disabled) {
 
                     input.value = 0;
-                }
-                else {
+                } else {
                     //if the input value is 0, don't get negative numbers
                     if (input.value === 0) {
                         inputVal = 0;
@@ -374,7 +372,6 @@ const App = (function () {
                 console.log(result.id_203);
                 console.log(num + ' num');
                 //console.log(Math.round(Number(totalArray[i].id_203) * 100) / 100);
-
 
 
                 result.id_255 += Number(totalArray[i].id_255);
