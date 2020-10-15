@@ -8,12 +8,11 @@ const ItemCtrl = (function () {
         totalArray: []
     }
     //Fetch the items from the demo_api or from the USDA Api
-
+  // TODO get dynamics items from the API
     FetchItems.getItems().then(items => {
 
         let i = 0;
         while (items.list.item[i]) {
-
             data.items.push(items.list.item[i]);
             i++;
         }
@@ -34,6 +33,7 @@ const ItemCtrl = (function () {
             }
 
             //Handle the next and previous buttons
+            // TODO strings validations
             if (page === 'raquo') {
                 currentPage++;
             } else if (page === 'laquo') {
