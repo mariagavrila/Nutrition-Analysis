@@ -34,9 +34,9 @@ const ItemCtrl = (function () {
             }
 
             //Handle the next and previous buttons
-            if (page == 'raquo') {
+            if (page === 'raquo') {
                 currentPage++;
-            } else if (page == 'laquo') {
+            } else if (page === 'laquo') {
                 currentPage--;
 
             } else {
@@ -45,13 +45,13 @@ const ItemCtrl = (function () {
 
             UICtrl.createBtn(numPages());
 
-            if (page == 1) {
+            if (page === 1) {
                 UICtrl.prevBtn.style.visibility = "hidden";
             } else {
                 UICtrl.prevBtn.style.visibility = "visible";
             }
 
-            if (page == numPages()) {
+            if (page === numPages()) {
                 UICtrl.nextBtn.style.visibility = "hidden";
             } else {
                 UICtrl.nextBtn.style.visibility = "visible";
@@ -66,7 +66,7 @@ const ItemCtrl = (function () {
                 if (items[i]) {
                     items[i].style.display = 'table-row';
                     //if item is last one on page and it's removed, then paginate again with the previous page
-                } else if (!items[i] && i % 5 == 0) {
+                } else if (!items[i] && i % 5 === 0) {
 
                     for (let item of UICtrl.pagination.children) {
 
@@ -74,7 +74,7 @@ const ItemCtrl = (function () {
 
                             item.classList.remove('active');
                         }
-                        if (item.firstElementChild.textContent == page - 1)
+                        if (item.firstElementChild.textContent === page - 1)
                             item.classList.add('active');
                     }
                     ItemCtrl.paginate(UICtrl.addItems.children, page - 1);
@@ -130,7 +130,7 @@ const App = (function () {
 
                 let element = UICtrl.addItems.children[i];
 
-                if (element.firstElementChild.id == id) {
+                if (element.firstElementChild.id === id) {
 
                     item = null;
 
@@ -210,7 +210,7 @@ const App = (function () {
         //handle the search button
         UICtrl.searchButton.addEventListener('click', (e) => {
 
-            if (UICtrl.searchItem.value == '') {
+            if (UICtrl.searchItem.value === '') {
 
                 UICtrl.emptyFeedback.style.display = 'block';
             }
@@ -302,7 +302,7 @@ const App = (function () {
                 }
                 else {
                     //if the input value is 0, don't get negative numbers
-                    if (input.value == 0) {
+                    if (input.value === 0) {
                         inputVal = 0;
                     }
                     input.value = inputVal;
@@ -334,7 +334,7 @@ const App = (function () {
                     }
                 }
 
-                if (UICtrl.addItems.children.length == 0) {
+                if (UICtrl.addItems.children.length === 0) {
 
                     UICtrl.emptyAnalysis();
                     UICtrl.pagination1.innerHTML = '';
